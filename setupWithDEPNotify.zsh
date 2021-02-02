@@ -16,7 +16,7 @@ mainTitle="Configuring $computerName..."
 if [[ -n "$4" ]]; then
 	mainText="$4"
 else
-	mainText="We are setting up this with a standard quite of software and security settings, including every day apps, configuration profiles and security policies. \\\n \\\n This process could take up to 20 minutes, so please don't restart or shutdown this Mac until we are done. \\\n \\\n At the end of this process, you will be prompted to restart this Mac and will be required to enable FileVault on your next login."
+	mainText="We are setting up this Mac with a standard quite of software and security settings, including every day apps, configuration profiles and security policies. \\\n \\\n This process could take up to 20 minutes, so please don't restart or shutdown this Mac until we are done."
 fi
 
 echo "Command: WindowStyle: $windowStyle" > ${DEPNotifyLog}
