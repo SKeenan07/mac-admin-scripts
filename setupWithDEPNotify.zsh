@@ -30,11 +30,11 @@ sudo -u "$currentUser" open -a /Applications/Utilities/DEPNotify.app # Uncomment
 
 # ----------------------------------- Set Up Mac -----------------------------------
 
-parameter7=$(echo "$7" | sed 's| |\n|g')
-parameter8=$(echo "$8" | sed 's| |\n|g')
-parameter9=$(echo "$9" | sed 's| |\n|g')
-parameter10=$(echo "${10}" | sed 's| |\n|g')
-parameter11=$(echo "${11}" | sed 's| |\n|g')
+parameter7=$(echo "$7" | sed 's| |\\n|g')
+parameter8=$(echo "$8" | sed 's| |\\n|g')
+parameter9=$(echo "$9" | sed 's| |\\n|g')
+parameter10=$(echo "${10}" | sed 's| |\\n|g')
+parameter11=$(echo "${11}" | sed 's| |\\n|g')
 
 declare -a inputParameters
 inputParameters=(
