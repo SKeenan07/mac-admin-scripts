@@ -1,11 +1,14 @@
 #!/bin/zsh
 
-DEPNotifyLog="/var/tmp/depnotify.log"
+# Sarah Keenan - January 28, 2021
+# This script configures and opens DEPNotify and runs custom policy triggers with Jamf. 
+
+# -------------------------- Configure and Open DEPNotify --------------------------
 
 computerName=$(scutil --get ComputerName)
 currentUser=$(stat -f%Su /dev/console)
 
-# -------------------------- Configure and Open DEPNotify --------------------------
+DEPNotifyLog="/var/tmp/depnotify.log"
 
 windowStyle="NotMovable"
 image="/Library/Application Support/JAMF/bin/brandingImage.png"
@@ -30,11 +33,25 @@ sudo -u "$currentUser" open -a /Applications/Utilities/DEPNotify.app # Uncomment
 
 # ----------------------------------- Set Up Mac -----------------------------------
 
-parameter7=$(echo "$7" | sed 's| |\\n|g')
-parameter8=$(echo "$8" | sed 's| |\\n|g')
-parameter9=$(echo "$9" | sed 's| |\\n|g')
-parameter10=$(echo "${10}" | sed 's| |\\n|g')
-parameter11=$(echo "${11}" | sed 's| |\\n|g')
+macOS_Version=$(sw_vers -productVersion | tr '.' ' ' | awk '{ print $1 }')
+
+if [[ "$macOS_Version" -eq "10" ]]; then
+
+	parameter7=$7
+	parameter8=$8
+	parameter9=$9
+	parameter10=${10}
+	parameter11=${11}
+
+elif [[ "$macOS_Version" -ge "11" ]]; then
+
+	parameter7=$(echo "$7" | sed 's| |\n|g')
+	parameter8=$(echo "$8" | sed 's| |\n|g')
+	parameter9=$(echo "$9" | sed 's| |\n|g')
+	parameter10=$(echo "${10}" | sed 's| |\n|g')
+	parameter11=$(echo "${11}" | sed 's| |\n|g')
+
+fi
 
 declare -a inputParameters
 inputParameters=(
@@ -47,18 +64,37 @@ inputParameters=(
 
 declare -a customTriggers
 
-# For every parameter
-for i in ${inputParameters[@]}; do
+if [[ "$macOS_Version" -eq "10" ]]; then
+	# For every parameter
+	for i in ${inputParameters}; do
 
-	# If the parameter is not empty
-	if [[ -n "$i" ]]; then
+		# If the parameter is not empty
+		if [[ -n "${i}" ]]; then
+			OIFS=$IFS
+			IFS=" "
+			read -r -A array <<< "$i"
+			IFS=$OIFS
+		
+			# For every custom trigger, add it to the array
+			for i in ${array[@]}; do
+				customTriggers+=( "$i" )
+			done
+		fi
+	done
+elif [[ "$macOS_Version" -ge "11" ]]; then
+	# For every parameter
+	for i in ${inputParameters[@]}; do
+
+		# If the parameter is not empty
+		if [[ -n "$i" ]]; then
 	
-		# For every custom trigger, add it to the array
-		for i in "${(f)i}"; do
-			customTriggers+=( "$i" )
-		done
-	fi
-done
+			# For every custom trigger, add it to the array
+			for i in "${(f)i}"; do
+				customTriggers+=( "$i" )
+			done
+		fi
+	done
+fi
 
 # Set the number of steps to the size of the customTriggers array
 echo "Command: Determinate: ${#customTriggers[@]}" >> ${DEPNotifyLog}
