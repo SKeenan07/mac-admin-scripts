@@ -55,11 +55,11 @@ fi
 
 declare -a inputParameters
 inputParameters=(
-    "$parameter7"
-    "$parameter8"
-    "$parameter9"
+	"$parameter7"
+	"$parameter8"
+	"$parameter9"
 	"$parameter10"
-    "$parameter11"
+	"$parameter11"
 )
 
 declare -a customTriggers
