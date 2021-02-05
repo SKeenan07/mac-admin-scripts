@@ -6,7 +6,7 @@ Click the header above for more info about my auto-logout script.
 
 ## [setupWithDEPNotify.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/setupWithDEPNotify.zsh)
 
-This script uses [input parameters](https://www.jamf.com/jamf-nation/articles/146/script-parameters) to configure DEPNotify and specify the custom triggers for the policies to run. 
+This script uses [input parameters](https://www.jamf.com/jamf-nation/articles/146/script-parameters) to configure DEPNotify and specify the custom triggers for the policies to run.
 
 **Parameter Labels:**
 
@@ -31,3 +31,5 @@ Parameters eight through eleven should have the same label as parameter seven.
   > Setup is now complete. Please click Quit.
   
 - Policy Custom Triggers: The custom triggers for the policies you want to run during setup. Multiple custom triggers can be specified in one parameter. 
+
+For a [full list of configurations](https://gitlab.com/Mactroll/DEPNotify) and to [download DEPNotify](https://gitlab.com/Mactroll/DEPNotify/-/releases), see the project on GitLab. 
