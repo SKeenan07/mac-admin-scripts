@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+# Sarah Keenan - January 13, 2021
+# This script automatically logs out (restarts) the Mac after a specified idle time. 
+
 # Are users logged in?
 loggedInUsers=$(last | grep "still logged in" | grep "console" | awk '{print $1}')
 
