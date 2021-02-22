@@ -4,6 +4,28 @@
 
 Click the header above for more info about my auto-logout script. 
 
+## [runInstallAppFromDMG.sh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/runInstallAppFromDMG.sh)
+
+This script uses [input parameters](https://www.jamf.com/jamf-nation/articles/146/script-parameters) to run an install application that is inside a DMG. 
+
+**Parameters:**
+
+4. DMG Name
+5. Volume Name
+6. Install Application Name
+7. Install Options / Flags
+
+**Error Codes**
+
+- `40 = No DMG specified`
+- `41 = Specified DMG does not exist`
+- `42 = Unknown problem with DMG variable`
+- `50 = No Volume Name specified`
+- `51 = Volume does not exist`
+- `60 = No Install Application specified`
+- `61 = Specified Install Application does not exist`
+- `62 = Unknown problem with Install Application`
+
 ## [setupWithDEPNotify.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/setupWithDEPNotify.zsh)
 
 This script uses [input parameters](https://www.jamf.com/jamf-nation/articles/146/script-parameters) to configure DEPNotify and specify the custom triggers for the policies to run.
