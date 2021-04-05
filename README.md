@@ -4,6 +4,14 @@
 
 Click the header above for more info about my auto-logout script. 
 
+## [deleteInactiveUsers.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/deleteInactiveUsers.zsh)
+
+This script deletes users that have not logged in within the last ten days. This script users input parameter 4 for adding additional users to exclude from being deleted. Each username should be separated by a space
+
+**Parameter 4 Label:** Users to NOT Delete (separate usernames with a space)
+
+**Example Parameter Value in Policy:** yourJamfManagementAccount otherAccountToKeep1 otherAccountToKeep2
+
 ## [excelToPlist.applescript](https://github.com/SKeenan07/mac-admin-scripts/blob/main/excelToPlist.applescript)
 
 This script creates an empty plist and gets the used range of an Excel spreadsheet. Then, for every row of the used range, a string key is created with the key set to item 2 and the value set to item 1. 
