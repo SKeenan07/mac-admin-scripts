@@ -16,6 +16,10 @@ This script deletes users that have not logged in within the last ten days. This
 
 This script creates an empty plist and gets the used range of an Excel spreadsheet. Then, for every row of the used range, a string key is created with the key set to item 2 and the value set to item 1. 
 
+## [getExtensionAttributeChoices.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/getExtensionAttributeChoices.zsh)
+
+This script gets the choices of a popup computer extension attribute using the Jamf Classic API. The API user will need to have read access to computer extension attributes. 
+
 ## [runInstallAppFromDMG.sh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/runInstallAppFromDMG.sh)
 
 This script uses [input parameters](https://www.jamf.com/jamf-nation/articles/146/script-parameters) to run an install application that is inside a DMG. 
