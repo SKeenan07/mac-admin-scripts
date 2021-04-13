@@ -18,7 +18,7 @@ This script creates an empty plist and gets the used range of an Excel spreadshe
 
 ## [getExtensionAttributeChoices.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/getExtensionAttributeChoices.zsh)
 
-This script gets the choices of a popup computer extension attribute using the Jamf Classic API. The API user will need to have read access to computer extension attributes. 
+This script gets the choices of a popup computer extension attribute using the [Jamf Classic API](https://www.jamf.com/developers/apis/classic/). The API user will need to have read access to computer extension attributes. 
 
 ## [runInstallAppFromDMG.sh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/runInstallAppFromDMG.sh)
 
