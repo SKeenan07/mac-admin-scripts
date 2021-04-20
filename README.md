@@ -12,6 +12,24 @@ This script deletes users that have not logged in within the last ten days. This
 
 **Example Parameter Value in Policy:** yourJamfManagementAccount otherAccountToKeep1 otherAccountToKeep2
 
+## [deleteItems.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/deleteItems.zsh)
+
+This script deletes items specified in the [input parameters](https://www.jamf.com/jamf-nation/articles/146/script-parameters).
+
+**Parameters:**
+
+4. Delimiter (The character that separates the items to delete, such as a comma.)
+5. Folder to delete items from (The folder path must begin and end with a `/`.)
+6. Items to delete
+
+**Error Codes**
+
+- `40 = No delimiter specified`
+- `50 = No folder specified`
+- `51 = Specified folder does not exist`
+- `52 = Specified folder does not match regex`
+- `60 = No items specified`
+
 ## [excelToPlist.applescript](https://github.com/SKeenan07/mac-admin-scripts/blob/main/excelToPlist.applescript)
 
 This script creates an empty plist and gets the used range of an Excel spreadsheet. Then, for every row of the used range, a string key is created with the key set to item 2 and the value set to item 1. 
