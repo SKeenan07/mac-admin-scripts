@@ -30,6 +30,22 @@ This script deletes items specified in the [input parameters](https://www.jamf.c
 - `52 = Specified folder does not match regex`
 - `60 = No items specified`
 
+## [eraseAndInstallMacOS.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/eraseAndInstallMacOS.zsh)
+
+This script erases and reinstalls the macOS specified in the [input parameters](https://www.jamf.com/jamf-nation/articles/146/script-parameters). 
+
+**Parameters:**
+
+4. Name of macOS installer (e.g. Install macOS Big Sur.app)
+5. Custom trigger of policy that installs the installer
+
+**Error Codes**
+
+- ` 1 = Failed to install install app`
+- `40 = Install app not specified`
+- `41 = Install app does not match format`
+- `51 = Custom trigger not specified`
+
 ## [excelToPlist.applescript](https://github.com/SKeenan07/mac-admin-scripts/blob/main/excelToPlist.applescript)
 
 This script creates an empty plist and gets the used range of an Excel spreadsheet. Then, for every row of the used range, a string key is created with the key set to item 2 and the value set to item 1. 
