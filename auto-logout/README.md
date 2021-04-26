@@ -2,10 +2,10 @@
 
 To deploy this script, you will need to create a package. You will need to place the files at the following locations:
 
-|||
-| ------------- | ------------- |
-| autoLogout.zsh  | /Library/Scripts/autoLogout/  |
-| com.yourorganization.autoLogout.plist  | /Library/LaunchDaemons/  |
+| File | Path | Permissions |
+| ------------- | ------------- | ------------- |
+| autoLogout.zsh | /Library/Scripts/autoLogout/ | rwxr--r-- |
+| com.yourorganization.autoLogout.plist | /Library/LaunchDaemons/ | rw-r--r-- |
 
 The launch daemon will load after the next restart. However, if you want it to load immediately, you can add the post-install script to your package.
 
