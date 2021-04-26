@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Sarah Keenan - January 13, 2021
-# This script automatically logs out (restarts) the Mac after a specified idle time. 
+# This script automatically logs out the Mac after a specified idle time. 
 
 quitRunningApplications () {
 	declare -a applications
