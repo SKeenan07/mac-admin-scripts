@@ -11,9 +11,13 @@ The launch daemon will load after the next restart. However, if you want it to l
 
 ## [autoLogout.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/auto-logout/autoLogout.zsh)
 
-This script will automatically log out the logged-in user if the Mac has passed a specified idle time. (The maximum idle time is 16 minutes and 10 seconds in the script.) When this happens, the below popup will appear to the user.
+This script will display the following popup to the logged-in user if the Mac passes a specified idle time:
 ![AutoLogoutPopup](https://github.com/SKeenan07/mac-admin-scripts/blob/main/auto-logout/autoLogoutPopup.png)
-If the user clicks "Log out" or the popup times out, the script will quit all applications and log out the user. 
+(The maximum idle time is 16 minutes and 10 seconds in the script.) If the user clicks "Log out" or the popup times out, the script will quit all applications and log out the user. 
+
+## [autoLogoutNoPopup.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/auto-logout/autoLogoutNoPopup.zsh)
+
+This script will automatically quit all open applications and log out the logged-in user if the Mac passes a specified idle time. (The maximum idle time is 16 minutes and 10 seconds in the script.
 
 ## [autoLogoutPostinstall.sh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/auto-logout/autoLogoutPostinstall.sh)
 
