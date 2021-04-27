@@ -54,6 +54,10 @@ This script creates an empty plist and gets the used range of an Excel spreadshe
 
 This script gets the choices of a popup computer extension attribute using the [Jamf Classic API](https://www.jamf.com/developers/apis/classic/). The API user will need to have read access to computer extension attributes. 
 
+## [makeCurrentUserAdmin.sh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/makeCurrentUserAdmin.sh)
+
+This script gets the current user and checks to see if they're an admin. If the current user is not in the admin group, then they are added to the group. 
+
 ## [runInstallAppFromDMG.sh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/runInstallAppFromDMG.sh)
 
 This script uses [input parameters](https://www.jamf.com/jamf-nation/articles/146/script-parameters) to run an install application that is inside a DMG. 
