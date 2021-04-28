@@ -109,3 +109,30 @@ Parameters eight through eleven should have the same label as parameter seven.
 - Policy Custom Triggers: The custom triggers for the policies you want to run during setup. Multiple custom triggers can be specified in one parameter. 
 
 For a [full list of configurations](https://gitlab.com/Mactroll/DEPNotify) and to [download DEPNotify](https://gitlab.com/Mactroll/DEPNotify/-/releases), see the project on GitLab. 
+
+## [uninstallMicrosoftOffice.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/uninstallMicrosoftOffice.zsh)
+
+This script follows the instructions from the following Microsoft Support article: [Uninstall Office for Mac](https://support.microsoft.com/en-us/office/uninstall-office-for-mac-eefa1199-5b58-43af-8a3d-b73dc1a8cae3). It removes the following:
+
+- /Applications/Microsoft Excel.app
+- /Applications/Microsoft OneNote.app
+- /Applications/Microsoft Outlook.app
+- /Applications/Microsoft PowerPoint.app
+- /Applications/Microsoft Teams.app
+- /Applications/Microsoft Word.app
+- /Applications/OneDrive.app
+- ~/Library/Containers/com.microsoft.errorreporting
+- ~/Library/Containers/com.microsoft.Excel
+- ~/Library/Containers/com.microsoft.netlib.shipassertprocess
+- ~/Library/Containers/com.microsoft.Office365ServiceV2
+- ~/Library/Containers/com.microsoft.Outlook
+- ~/Library/Containers/com.microsoft.Powerpoint
+- ~/Library/Containers/com.microsoft.RMS-XPCService
+- ~/Library/Containers/com.microsoft.Word
+- ~/Library/Containers/com.microsoft.onenote.mac
+- ~/Library/Group Containers/UBF8T346G9.ms
+- ~/Library/Group Containers/UBF8T346G9.Office
+- ~/Library/Group Containers/UBF8T346G9.OfficeOsfWebHost
+- ~/Library/Caches/com.microsoft.teams
+- ~/Library/Caches/com.microsoft.teams.shipit
+- ~/Library/Application Support/Microsoft/Teams
