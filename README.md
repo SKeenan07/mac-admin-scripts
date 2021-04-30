@@ -4,6 +4,10 @@
 
 Click the header above for more info about my auto-logout script. 
 
+## [Install Latest](https://github.com/SKeenan07/mac-admin-scripts/tree/main/install-latest)
+
+The scripts in this folder install the latest version of the app if it is not already installed.
+
 ## [deleteInactiveUsers.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/deleteInactiveUsers.zsh)
 
 This script deletes users that have not logged in within the last ten days. This script users input parameter 4 for adding additional users to exclude from being deleted. Each username should be separated by a space
