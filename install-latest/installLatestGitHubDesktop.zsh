@@ -24,8 +24,7 @@ isAppInstalled () {
 installApp () {
     # Dowonload the latest version
     echo "Downloading $appName..."
-    # curl -Lo "/tmp/$tmpFile" "$downloadURL"
-    curl -Lo /tmp/tmp.zip $downloadURL
+    curl -sLo /tmp/tmp.zip $downloadURL
 
     # Unzip
     echo "Unzipping..."
@@ -42,6 +41,7 @@ installApp () {
 }
 
 isAppUpdated () {
+    installedVersion=$(defaults read "/Applications/$appName.app/Contents/Info.plist" CFBundleShortVersionString)
     if [[ -z "$latestVersion" ]]; then
         exitScript 1 "Could not get latest version."
     elif [[ "$latestVersion" == "$installedVersion" ]]; then
@@ -67,7 +67,6 @@ if [[ "$installed" == "no" ]]; then
     fi
 
 elif [[ "$installed" == "yes" ]]; then
-    installedVersion=$(defaults read "/Applications/$appName.app/Contents/Info.plist" CFBundleShortVersionString)
 
     # From installomator
     latestVersion=$(curl -fsL https://central.github.com/deployments/desktop/desktop/changelog.json | awk -F '{' '/"version"/ { print $2 }' | sed -E 's/.*,\"version\":\"([0-9.]*)\".*/\1/g')
