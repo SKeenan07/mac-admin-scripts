@@ -25,8 +25,7 @@ isAppInstalled () {
 installApp () {
     # Dowonload the latest version
     echo "Downloading $appName..."
-    # curl -Lo "/tmp/$tmpFile" "$downloadURL"
-    curl -Lo /tmp/tmp.zip $downloadURL
+    curl -sLo /tmp/tmp.zip $downloadURL
 
     # Unzip
     echo "Unzipping..."
@@ -43,6 +42,7 @@ installApp () {
 }
 
 isAppUpdated () {
+    installedVersion=$(defaults read "/Applications/$appName.app/Contents/Info.plist" CFBundleShortVersionString)
     if [[ -z "$latestVersion" ]]; then
         exitScript 1 "Could not get latest version."
     elif [[ "$latestVersion" == "$installedVersion" ]]; then
@@ -68,7 +68,6 @@ if [[ "$installed" == "no" ]]; then
     fi
 
 elif [[ "$installed" == "yes" ]]; then
-    installedVersion=$(defaults read "/Applications/$appName.app/Contents/Info.plist" CFBundleShortVersionString)
 
     # From installomator
     latestVersion=$(curl -is https://iterm2.com/downloads/stable/latest | grep location: | grep -o "iTerm2.*zip" | cut -d "-" -f 2 | cut -d '.' -f1 | sed 's/_/./g')
