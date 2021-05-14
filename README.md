@@ -62,6 +62,10 @@ This script creates an empty plist and gets the used range of an Excel spreadshe
 
 This script gets the choices of a popup computer extension attribute using the [Jamf Classic API](https://www.jamf.com/developers/apis/classic/). The API user will need to have read access to computer extension attributes. 
 
+## [macOSisN-2.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/macOSisN-2.zsh)
+
+This script gets the installed macOS version and the current macOS version from Jamf's macOS patch definition. If the installed macOS version matches a regex of the three most recent macOS versions, then the script returns true. If not, the script returns false. 
+
 ## [makeCurrentUserAdmin.sh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/makeCurrentUserAdmin.sh)
 
 This script gets the current user and checks to see if they're an admin. If the current user is not in the admin group, then they are added to the group. 
