@@ -74,7 +74,7 @@ elif [[ "$installed" == "yes" ]]; then
     updated=$(isAppUpdated)
 
     if [[ "$updated" == "no" ]]; then
-        echo "Updating $appName from $installedVersion to $latestVersion..."
+        echo "Updating $appName to $latestVersion..."
 
         installApp
         updated=$(isAppUpdated)
