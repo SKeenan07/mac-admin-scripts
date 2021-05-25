@@ -14,7 +14,7 @@ exitScript () {
 }
 
 isAppInstalled () {
-    if [[ -e "/Applications/$appName.app" ]]; then
+    if [[ -e "$appPath/$appName.app" ]]; then
         echo "yes"
     else
         echo "no"
@@ -41,7 +41,7 @@ installApp () {
 }
 
 isAppUpdated () {
-    installedVersion=$(defaults read "/Applications/$appName.app/Contents/Info.plist" CFBundleShortVersionString)
+    installedVersion=$(defaults read "$appPath/$appName.app/Contents/Info.plist" CFBundleShortVersionString)
     if [[ -z "$latestVersion" ]]; then
         exitScript 1 "Could not get latest version."
     elif [[ "$latestVersion" == "$installedVersion" ]]; then
