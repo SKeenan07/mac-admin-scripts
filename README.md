@@ -12,6 +12,12 @@ The scripts in this folder install the latest version of the app if it is not al
 
 Click the header above for more info about my DEPNotify setup scripts. 
 
+---
+
+## [changeOwnerToCurrentUser.sh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/changeOwnerToCurrentUser.sh)
+
+This script changes the owner of the files specified in the input parameters to the current user. If the path to the file is in the User's directory, use `~/` (i.e., ~/folder/file.txt)
+
 ## [deleteInactiveUsers.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/deleteInactiveUsers.zsh)
 
 This script deletes users that have not logged in within the last ten days. This script users input parameter 4 for adding additional users to exclude from being deleted. Each username should be separated by a space
@@ -22,7 +28,7 @@ This script deletes users that have not logged in within the last ten days. This
 
 ## [deleteItems.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/deleteItems.zsh)
 
-This script deletes items specified in the [input parameters](https://www.jamf.com/jamf-nation/articles/146/script-parameters).
+This script deletes items specified in the input parameters.
 
 **Parameters:**
 
@@ -40,7 +46,7 @@ This script deletes items specified in the [input parameters](https://www.jamf.c
 
 ## [eraseAndInstallMacOS.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/eraseAndInstallMacOS.zsh)
 
-This script erases and reinstalls the macOS specified in the [input parameters](https://www.jamf.com/jamf-nation/articles/146/script-parameters). 
+This script erases and reinstalls the macOS specified in the input parameters. 
 
 **Parameters:**
 
@@ -60,7 +66,7 @@ This script creates an empty plist and gets the used range of an Excel spreadshe
 
 ## [getExtensionAttributeChoices.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/getExtensionAttributeChoices.zsh)
 
-This script gets the choices of a popup computer extension attribute using the [Jamf Classic API](https://www.jamf.com/developers/apis/classic/). The API user will need to have read access to computer extension attributes. 
+This script gets the choices of a popup computer extension attribute using the [Jamf Classic API](https://developer.jamf.com/jamf-pro/docs). The API user will need to have read access to computer extension attributes. 
 
 ## [macOSisN-2.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/macOSisN-2.zsh)
 
@@ -72,7 +78,7 @@ This script gets the current user and checks to see if they're an admin. If the 
 
 ## [runInstallAppFromDMG.sh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/runInstallAppFromDMG.sh)
 
-This script uses [input parameters](https://www.jamf.com/jamf-nation/articles/146/script-parameters) to run an install application that is inside a DMG. 
+This script uses input parameters to run an install application that is inside a DMG. 
 
 **Parameters:**
 
