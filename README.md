@@ -1,24 +1,28 @@
 # Mac Admin Scripts
 
-## [Auto Logout](https://github.com/SKeenan07/mac-admin-scripts/tree/main/auto-logout)
+## [Adobe](./adobe)
+
+Click the header above for more info about my Adobe scripts. 
+
+## [Auto Logout](./auto-logout)
 
 Click the header above for more info about my auto-logout script. 
 
-## [Install Latest](https://github.com/SKeenan07/mac-admin-scripts/tree/main/install-latest)
+## [Install Latest](./install-latest)
 
 The scripts in this folder install the latest version of the app if it is not already installed.
 
-## [Setup with DEPNotify](https://github.com/SKeenan07/mac-admin-scripts/tree/main/setup-with-depnotify)
+## [Setup with DEPNotify](./setup-with-depnotify)
 
 Click the header above for more info about my DEPNotify setup scripts. 
 
 ---
 
-## [changeOwnerToCurrentUser.sh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/changeOwnerToCurrentUser.sh)
+## [changeOwnerToCurrentUser.sh](./changeOwnerToCurrentUser.sh)
 
 This script changes the owner of the files specified in the input parameters to the current user. If the path to the file is in the User's directory, use `~/` (i.e., ~/folder/file.txt)
 
-## [deleteInactiveUsers.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/deleteInactiveUsers.zsh)
+## [deleteInactiveUsers.zsh](./deleteInactiveUsers.zsh)
 
 This script deletes users that have not logged in within the last ten days. This script users input parameter 4 for adding additional users to exclude from being deleted. Each username should be separated by a space
 
@@ -26,7 +30,7 @@ This script deletes users that have not logged in within the last ten days. This
 
 **Example Parameter Value in Policy:** yourJamfManagementAccount otherAccountToKeep1 otherAccountToKeep2
 
-## [deleteItems.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/deleteItems.zsh)
+## [deleteItems.zsh](./deleteItems.zsh)
 
 This script deletes items specified in the input parameters.
 
@@ -44,7 +48,7 @@ This script deletes items specified in the input parameters.
 - `52 = Specified folder does not match regex`
 - `60 = No items specified`
 
-## [eraseAndInstallMacOS.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/eraseAndInstallMacOS.zsh)
+## [eraseAndInstallMacOS.zsh](./eraseAndInstallMacOS.zsh)
 
 This script erases and reinstalls the macOS specified in the input parameters. 
 
@@ -60,23 +64,23 @@ This script erases and reinstalls the macOS specified in the input parameters.
 - `41 = Install app does not match format`
 - `51 = Custom trigger not specified`
 
-## [excelToPlist.applescript](https://github.com/SKeenan07/mac-admin-scripts/blob/main/excelToPlist.applescript)
+## [excelToPlist.applescript](./excelToPlist.applescript)
 
 This script creates an empty plist and gets the used range of an Excel spreadsheet. Then, for every row of the used range, a string key is created with the key set to item 2 and the value set to item 1. 
 
-## [getExtensionAttributeChoices.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/getExtensionAttributeChoices.zsh)
+## [getExtensionAttributeChoices.zsh](./getExtensionAttributeChoices.zsh)
 
 This script gets the choices of a popup computer extension attribute using the [Jamf Classic API](https://developer.jamf.com/jamf-pro/docs). The API user will need to have read access to computer extension attributes. 
 
-## [macOSisN-2.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/macOSisN-2.zsh)
+## [macOSisN-2.zsh](./macOSisN-2.zsh)
 
 This script gets the installed macOS version and the current macOS version from Jamf's macOS patch definition. If the installed macOS version matches a regex of the three most recent macOS versions, then the script returns true. If not, the script returns false. 
 
-## [makeCurrentUserAdmin.sh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/makeCurrentUserAdmin.sh)
+## [makeCurrentUserAdmin.sh](./makeCurrentUserAdmin.sh)
 
 This script gets the current user and checks to see if they're an admin. If the current user is not in the admin group, then they are added to the group. 
 
-## [runInstallAppFromDMG.sh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/runInstallAppFromDMG.sh)
+## [runInstallAppFromDMG.sh](./runInstallAppFromDMG.sh)
 
 This script uses input parameters to run an install application that is inside a DMG. 
 
@@ -98,7 +102,7 @@ This script uses input parameters to run an install application that is inside a
 - `61 = Specified Install Application does not exist`
 - `62 = Unknown problem with Install Application`
 
-## [uninstallMicrosoftOffice.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/uninstallMicrosoftOffice.zsh)
+## [uninstallMicrosoftOffice.zsh](./uninstallMicrosoftOffice.zsh)
 
 This script follows the instructions from the following Microsoft Support article: [Uninstall Office for Mac](https://support.microsoft.com/en-us/office/uninstall-office-for-mac-eefa1199-5b58-43af-8a3d-b73dc1a8cae3). It removes the following:
 
