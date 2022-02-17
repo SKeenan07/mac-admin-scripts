@@ -1,6 +1,6 @@
 # Setup with DEPNotify
 
-## [setupWithDEPNotifyCombined.zsh](https://github.com/SKeenan07/mac-admin-scripts/blob/main/setup-with-depnotify/setupWithDEPNotifyCombined.zsh)
+## [setupWithDEPNotifyCombined.zsh](./setupWithDEPNotifyCombined.zsh)
 
 This script uses [input parameters](https://www.jamf.com/jamf-nation/articles/146/script-parameters) to configure DEPNotify and specify the custom triggers for the policies to run.
 
