@@ -42,4 +42,4 @@ for item in ${itemsToDelete[@]}; do
     else
         echo "$folder$item does not exist."
     fi
-don
+done
