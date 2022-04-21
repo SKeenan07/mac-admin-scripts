@@ -13,11 +13,11 @@ else
 fi
 
 # If parameter 5 is not empty and it exists, set it to the folder
-if [[ -n "$5" ]] && [[ -e "$5" ]] && [[ "$5" =~ "^\/.+\/$|^\/$" ]]; then
+if [[ -n "$5" ]] && [[ -e "$5" ]] && [[ "$5" =~ "^\/.+\/$" ]]; then
     folder="$5"
 elif [[ -n "$5" ]] && [[ ! -e "$5" ]]; then
     fail 51 "SPECIFIED FOLDER, $5, DOES NOT EXIST."
-elif [[ -n "$5" ]] && [[ ! "$5" =~ "^\/.+\/$|^\/$" ]]; then
+elif [[ -n "$5" ]] && [[ ! "$5" =~ "^\/.+\/$" ]]; then
     fail 52 "SPECIFIED FOLDER, $5, DOES NOT MATCH REGEX."
 else
     fail 50 "NO FOLDER SPECIFIED."
@@ -33,13 +33,21 @@ else
     fail 60 "NO ITEMS SPECIFIED."
 fi
 
+date
 # For every item, delete it if it exists
 for item in ${itemsToDelete[@]}; do
-    if [[ -e "$folder$item" ]]; then
-        echo "$folder$item exists."
-        echo "Deleting $folder$item..."
-        rm -rf "$folder$item" && echo "Deleted $folder$item"
+
+	fullPath=$(find "$folder" -iname "$item")
+
+    if [[ -n "$fullPath" ]]; then
+    	for i in ${(f)fullPath[@]}; do
+			echo "$i exists."
+			echo "Deleting $i..."
+			rm -rf "$i" && echo "Deleted $i"
+        done
     else
-        echo "$folder$item does not exist."
+        echo "$item does not exist."
     fi
+	date
+	echo "---"
 done
