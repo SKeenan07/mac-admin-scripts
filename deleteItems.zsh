@@ -37,13 +37,13 @@ date
 # For every item, delete it if it exists
 for item in ${itemsToDelete[@]}; do
 
-	fullPath=$(find "$folder" -iname "$item")
+    fullPath=$(find "$folder" -iname "$item")
 
     if [[ -n "$fullPath" ]]; then
-    	for i in ${(f)fullPath[@]}; do
-			echo "$i exists."
-			echo "Deleting $i..."
-			rm -rf "$i" && echo "Deleted $i"
+        for i in ${(f)fullPath[@]}; do
+            echo "$i exists."
+            echo "Deleting $i..."
+            rm -rf "$i" && echo "Deleted $i"
         done
     else
         echo "$item does not exist."
