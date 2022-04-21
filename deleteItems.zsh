@@ -33,11 +33,19 @@ else
     fail 60 "NO ITEMS SPECIFIED."
 fi
 
-date
+# If parameter 7 is not empty and is a number, set the max depth
+if [[ -n "$7" ]] && [[ "$7" =~ "[0-9]+" ]]; then
+    maxDepth=$7
+elif [[ -n "$7" ]] && [[ ! "$7" =~ "[0-9]+" ]]; then
+    fail 71 "SPECIFIED VALUE, $7, DOES NOT MATCH REGEX"
+else
+    maxDepth=1
+fi
+
 # For every item, delete it if it exists
 for item in ${itemsToDelete[@]}; do
 
-    fullPath=$(find "$folder" -iname "$item")
+    fullPath=$(find "$folder"  -maxdepth "$maxDepth" -iname "$item")
 
     if [[ -n "$fullPath" ]]; then
         for i in ${(f)fullPath[@]}; do
@@ -48,6 +56,5 @@ for item in ${itemsToDelete[@]}; do
     else
         echo "$item does not exist."
     fi
-	date
 	echo "---"
 done
