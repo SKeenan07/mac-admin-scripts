@@ -39,6 +39,7 @@ This script deletes items specified in the input parameters.
 4. Delimiter (The character that separates the items to delete, such as a comma.)
 5. Folder to delete items from (The folder path must begin and end with a `/`.)
 6. Items to delete
+7. Folder depth to search - If 1, it will only look inside the root folder. If 2, it will look inside the root folder and its subfolders.
 
 **Error Codes**
 
@@ -47,6 +48,7 @@ This script deletes items specified in the input parameters.
 - `51 = Specified folder does not exist`
 - `52 = Specified folder does not match regex`
 - `60 = No items specified`
+- `71 = Specified value does not match regex`
 
 ## [eraseAndInstallMacOS.zsh](./eraseAndInstallMacOS.zsh)
 
