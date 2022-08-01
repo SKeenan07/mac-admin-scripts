@@ -130,3 +130,7 @@ This script follows the instructions from the following Microsoft Support articl
 - ~/Library/Caches/com.microsoft.teams
 - ~/Library/Caches/com.microsoft.teams.shipit
 - ~/Library/Application Support/Microsoft/Teams
+
+## [uninstallPrinter.zsh](./uninstallPrinter.zsh)
+
+This script uninstalls printers specified in the input parameters. 
