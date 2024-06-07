@@ -13,11 +13,11 @@ The launch daemon will load after the next restart. However, if you want it to l
 
 This script will display the following popup to the logged-in user if the Mac passes a specified idle time:
 ![AutoLogoutPopup](./autoLogoutPopup.png)
-(The maximum idle time is 16 minutes and 10 seconds in the script.) If the user clicks "Log out" or the popup times out, the script will quit all applications and log out the user. 
+(The maximum idle time is 15 minutes in the script.) If the user clicks "Log out" or the popup times out, the script will quit all applications and log out the user. 
 
 ## [autoLogoutNoPopup.zsh](./autoLogoutNoPopup.zsh)
 
-This script will automatically quit all open applications and log out the logged-in user if the Mac passes a specified idle time. (The maximum idle time is 16 minutes and 10 seconds in the script.
+This script will automatically quit all open applications and log out the logged-in user if the Mac passes a specified idle time. (The maximum idle time is 15 minutes in the script.)
 
 ## [autoLogoutPostinstall.sh](./autoLogoutPostinstall.sh)
 
