@@ -24,11 +24,24 @@ This script changes the owner of the files specified in the input parameters to 
 
 ## [deleteInactiveUsers.zsh](./deleteInactiveUsers.zsh)
 
-This script deletes users that have not logged in within the last ten days. This script users input parameter 4 for adding additional users to exclude from being deleted. Each username should be separated by a space
+This script deletes users that have not logged in within the last specified number of days. This script uses multiple input parameters for configuring the script.
 
-**Parameter 4 Label:** Users to NOT Delete (separate usernames with a space)
+**Parameters:**
 
-**Example Parameter Value in Policy:** yourJamfManagementAccount otherAccountToKeep1 otherAccountToKeep2
+4. Mode (DEBUG | TESTING) - DEBUG will display additional output - TESTING mode will not delete any accounts (You can use both of these at the same time, just separate them with a space.)
+5. Number of days of inactivity (e.g. 10 → the account will be deleted when it has been inactive for 10 or more days.)
+6. Users to not delete (separate usernames with a space)
+7. (I'm using this parameter internally to differentiate between different types of accounts. I did not include this parameter in the script.)
+8. Admin Username
+9. Admin password - encrypted string
+10. Admin password - salt
+11. Admin password - passphrase
+
+**Error Codes**
+
+- `51 = Parameter 5 can only contain digits`
+- `52 = No value set for Parameter 5`
+- `80 = No value(s) for Admin Username/Password`
 
 ## [deleteItems.zsh](./deleteItems.zsh)
 
